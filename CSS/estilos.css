@@ -65,7 +65,16 @@ nav h2 a:hover, nav h2 a:focus,
     background-color: var(--cor-intermediaria);
 }
 
-.menu { list-style: none; }
+
+.menu { 
+    /* regras da lista ul de links */
+    list-style: none;
+
+    /* ATENÇÃO!
+    usamos o display:none para não exibir inicialmente a lista de links */
+    display: none;
+
+}
 
 /* regra para formatar os links contidos na lista/menu */
 
@@ -83,10 +92,55 @@ nav h2 a:hover, nav h2 a:focus,
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 50px;
-        
+        height: 50px;  
+
+}
+ 
+/* seletor de classes combinadas. Esta regra somente irá funcionar quando 
+AS DUAS CLASSES estiverem aplicadas JUNTAS no elemento HTML (no caso, na lista de menu/links)
+
+obs.: esta combinação será possivel por meio da manipulação programada com JavaScript.
+ */
+.menu.aberto {
+    /* O flex fará a lista de links aparecer */
+    display: flex;
+
+    /* com os links em forma de coluna (vertical) */
+    flex-direction: column;
     
-         
+    /* Usamos as propriedades de posicionamento e coordenadas
+     para garantir o encaixe correto (abaixo do título e da palavra Menu) */
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    /* Aplicamos um á lista evitando a dificuldade de leitura dos links */
+    background-color: var(--cor-clara);
 
 }
 
+/* 1) Crie uma regra CSS para formatar o artigo/seção de Destaque com as seguintes configurações:
+
+
+
+	
+Altura de uns 500px
+	
+Imagem de fundo (fundo-destaque)
+	
+Imagem de fundo deve ficar parada
+	
+Flex com alinhamento totalmente centralizado, e um elemento em cima do outro (ou seja, em modo coluna)
+
+
+ 
+
+2) Crie uma regra CSS para formatar o h2 e o p contidos em Destaque. Faça com que os textos fiquem centralizados e com a cor clara  */
+ 
+.destaque {
+    height: 500px;
+    background-image: url(../imagens/fundo-destaque.jpg);
+    background-attachment: fixed;
+    display: flex;
+}
+  
