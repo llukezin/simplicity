@@ -47,6 +47,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 12vh;
 }
 
 
@@ -120,9 +121,6 @@ obs.: esta combinação será possivel por meio da manipulação programada com 
 }
 
 /* 1) Crie uma regra CSS para formatar o artigo/seção de Destaque com as seguintes configurações:
-
-
-
 	
 Altura de uns 500px
 	
@@ -130,17 +128,42 @@ Imagem de fundo (fundo-destaque)
 	
 Imagem de fundo deve ficar parada
 	
-Flex com alinhamento totalmente centralizado, e um elemento em cima do outro (ou seja, em modo coluna)
-
-
- 
-
-2) Crie uma regra CSS para formatar o h2 e o p contidos em Destaque. Faça com que os textos fiquem centralizados e com a cor clara  */
+Flex com alinhamento totalmente centralizado, e um elemento em cima do outro (ou seja, em modo coluna)*/
  
 .destaque {
-    height: 500px;
+
+    height: 88vh;
+
     background-image: url(../imagens/fundo-destaque.jpg);
+
     background-attachment: fixed;
+
     display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
 }
+
+ 
+
+/* 2) Crie uma regra CSS para formatar o h2 e o p
+
+contidos em Destaque. Faça com que os textos
+
+fiquem centralizados e com a cor clara */
+
+ 
+
+.destaque h2, .destaque p {
+
+    text-align: center;
+
+    color: white;
+
+}
+
   
