@@ -102,20 +102,25 @@ AS DUAS CLASSES estiverem aplicadas JUNTAS no elemento HTML (no caso, na lista d
 
 obs.: esta combinação será possivel por meio da manipulação programada com JavaScript.
  */
+ 
 .menu.aberto {
+
     /* O flex fará a lista de links aparecer */
     display: flex;
 
     /* com os links em forma de coluna (vertical) */
+
     flex-direction: column;
     
     /* Usamos as propriedades de posicionamento e coordenadas
      para garantir o encaixe correto (abaixo do título e da palavra Menu) */
+
     position: absolute;
     left: 0;
     right: 0;
 
     /* Aplicamos um á lista evitando a dificuldade de leitura dos links */
+
     background-color: var(--cor-clara);
 
 }
@@ -157,13 +162,38 @@ contidos em Destaque. Faça com que os textos
 fiquem centralizados e com a cor clara */
 
  
-
 .destaque h2, .destaque p {
 
     text-align: center;
 
-    color: white;
+    color: var(--cor-clara);
+    animation-name: animaDestaque;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
 
 }
 
-  
+.destaque h2 {
+
+    /* função clamp( tamanho minimo, tamanho ideal, tamanho maximo*/
+
+    font-size: clamp (3rem, 10vw, 7rem);
+    
+}
+
+.destaque p {
+
+    font-size: clamp (1.5rem, 3vw, 3rem);
+
+}
+
+/* regra de animação */
+
+@keyframes animaDestaque {
+
+    from { opacity: 0;
+           transform: translateY(-500px);}
+
+    to { opacity: 1;}
+
+}
