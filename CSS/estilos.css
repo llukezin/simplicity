@@ -43,11 +43,19 @@ h1 a {
 
 a { text-decoration: none }
 
-header {
+header .limitador {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 12vh;
+}
+
+header {
+    
+
+    position: sticky;
+    top: 0;
+    background-color: var(--cor-clara);
 }
 
 
@@ -268,6 +276,7 @@ Aplique esta classe no cabeçalho e no artigo front-end.*/
 .limitador {
     width: 95vw;
     margin: auto;
+    background-color: var(--cor-clara);
 }
 
 /*6) Crie uma regra para o rodapé com:
