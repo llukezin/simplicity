@@ -239,6 +239,7 @@ address { font-style: normal; }
 
 .historia h2 {
     color: var(--cor-clara);
+    text-shadow: red 2px 2px 5px;
 }
 
 /*3) Crie uma regra para formatar o vídeo do artigo História da Internet com:
