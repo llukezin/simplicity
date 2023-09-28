@@ -276,7 +276,7 @@ Aplique esta classe no cabeçalho e no artigo front-end.*/
 .limitador {
     width: 95vw;
     margin: auto;
-    background-color: var(--cor-clara);
+    background-color: var(--cor-clarasim);
 }
 
 /*6) Crie uma regra para o rodapé com:
@@ -298,3 +298,46 @@ footer {
     align-items: center;
     text-align: center;
 }
+
+/* 1) Crie uma regra condicional para telas a partir de 570px com as seguintes alterações:
+
+ 
+
+- Esconder a palavra Menu
+- Habilitar o flex para a classe "menu"
+- Definir largura de 100% para os itens dentro do "menu"
+- Definir largura de 70% para o nav
+- Reduzir para 200px a altura da imagem contida no artigo Front-End
+ 
+ 
+
+2) Crie uma regra condicional para telas a partir de 900px com  as seguintes alterações:
+
+ 
+
+- Aumentar o tamanho geral de todos os textos para 18px 
+- Definir o tamanho máximo da classe limitador para 1000px */
+
+@media screen and (min-width: 570px) {
+
+    nav h2 a { display: none }
+    
+      .menu {display: flex;}
+      
+      .menu li { width: 100%;}
+
+       nav { width: 70%;}
+    
+      .front-end img { height: 150px }
+    }
+    
+    
+    @media screen and (min-width: 900px) {
+      
+      html { font-size: 18px; }
+    
+     
+      .limitador { max-width: 1000px; }
+    }
+    
+  
