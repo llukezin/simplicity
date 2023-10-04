@@ -415,8 +415,28 @@ label {
     width: 30%;
 }
 
-form div * {
-    width: 70%;
+/* PSeudo-classe :not()
+permite criar exceçoes para uma regra.
+neste exemplo, estamos aplicando 70% de largura para tudo (*) denetro do "for div"
+EXCETO o "label" */
+
+form div *:not(label) { width: 70%; }
+
+button {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border: none;
+    font-weight: bold;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover, button:focus {
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+    box-shadow: var(--cor-escura) 0 0 2px;
+
 }
 
 /* 1) Crie uma regra condicional para telas a partir de 570px com as seguintes alterações:
