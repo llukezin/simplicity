@@ -386,8 +386,38 @@ figure {
 
 }
 
+/* regras para formulario */
+form {
+     max-width: 500px;
+     margin: auto;
+     
+}
 
+input, select, textarea {
+    border: none;
+    padding: 4px;
+    height: 40px;
+    border-radius: 4px;
+}
 
+textarea { height: auto;}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight:bold;
+    width: 30%;
+}
+
+form div * {
+    width: 70%;
+}
 
 /* 1) Crie uma regra condicional para telas a partir de 570px com as seguintes alterações:
 
