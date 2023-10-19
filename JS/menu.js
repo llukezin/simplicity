@@ -14,6 +14,14 @@ const textBotao = botaoMenu.querySelector("a");
 
 botaoMenu.addEventListener("click", function(event){
     
+    /* Anular/prevenir o comportamneot do link*/
     event.preventDefault();
     menu.classList.toggle("aberto"); 
-});
+
+    if (menu.classList.contains("aberto")){
+        textBotao.innerHTML = "Fechar &times;";
+
+    } else {
+        textBotao.innerHTML = "Menu &equiv;";
+    }
+ });
