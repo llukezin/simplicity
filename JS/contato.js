@@ -18,6 +18,7 @@ const campoTelefone = formulario.querySelector("#telefone");
 
 // Ativando a máscara para o telefone
 $(campoTelefone).mask("(00) 0000-0000"); // exemplo: (11) 4002-8922
+$(campoCep).mask("00000-000");
 
 // Detectando o evento de click no botão buscar
 botaoBuscar.addEventListener("click", async function (event){
@@ -27,7 +28,7 @@ botaoBuscar.addEventListener("click", async function (event){
 
     /* Verificando se o cep tem 8 digitos 
     O operador !== significa "Diferente de". */
-    if(campoCep.value.length !== 8){
+    if(campoCep.value.length !== 9){
         // Alerta o usuário sobre o erro de digitação
         mensagem.textContent = "Digite um CEP válido!";
         mensagem.style.color = "purple";
