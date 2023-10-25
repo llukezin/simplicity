@@ -62,6 +62,11 @@ botaoBuscar.addEventListener("click", async function (event){
         mensagem.textContent = "CEP encotrado!";
         mensagem.style.color = "blue";
 
+        // const exemplos = document.querySelector(".exemplo");
+        // for(const exemplo of exemplos){
+        //     exemplo.classList.remove("exemplo");
+        // }
+
         campoEndereco.value = dados.logradouro;
         campoBairro.value = dados.bairro;
         campoCidade.value = dados.localidade;
